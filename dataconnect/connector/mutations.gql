@@ -1,0 +1,3 @@
+mutation CreateMovie($title: String, $genre: String) @auth(level: PUBLIC) {
+  movie_insert(data: { title: $title, genre: $genre })
+}

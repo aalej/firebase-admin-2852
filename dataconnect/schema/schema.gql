@@ -1,0 +1,18 @@
+type Movie @table {
+  id: UUID! @default(expr: "uuidV4()")
+  title: String!
+  genre: String
+}
+
+# type User @table {
+#   id: String! @default(expr: "auth.uid")
+#   username: String! @col(dataType: "varchar(50)")
+# }
+
+# type Review @table(name: "Reviews", key: ["movie", "user"]) {
+#   user: User!
+#   movie: Movie!
+#   rating: Int
+#   reviewText: String
+#   reviewDate: Date! @default(expr: "request.time")
+# }
